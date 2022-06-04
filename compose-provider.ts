@@ -1,26 +1,28 @@
-import {NodeJSService, NodeJSSource, PGAdminService, PostgresService} from "@vlegm/cli";
+import {NodeJS, RepoSource, PGAdmin, Postgres} from "@vlegm/cli";
 
-export const server = new NodeJSService(8080);
-server.addSource("git@github.com:vlegm/event-matcher-server.git", "yarn install");
+export const server = NodeJS(8080)
+  .include('src')
+  .source('git@github.com:vlegm/event-matcher-cloud-functions.git')
+  .npmLink('expressman');
 
-export const client = new NodeJSService(3000);
-client.addSource("git@github.com:vlegm/event-matcher-client.git", "yarn install");
+export const client = NodeJS(3000)
+  .source('git@github.com:vlegm/event-matcher-client.git');
 
-export const expressman = new NodeJSSource("git@github.com:vlegm/expressman.git");
+export const expressman = RepoSource("git@github.com:vlegm/expressman.git", [
+  'yarn install',
+  'yarn build'
+]);
 
-export const postgres = new PostgresService({
-  POSTGRES_HOST: 'postgres',
+export const postgres = Postgres({
   POSTGRES_PORT: 5432,
+  POSTGRES_HOST: 'postgres',
   POSTGRES_DB: 'event-matcher',
   POSTGRES_USER: 'superuser',
   POSTGRES_PASSWORD: 'password',
-}, {
-  port: 5432
 })
 
-export const pgadmin = new PGAdminService({
+export const pgadmin = PGAdmin({
+  PGADMIN_PORT: 8081,
   PGADMIN_DEFAULT_EMAIL: 'superuser@local.com',
   PGADMIN_DEFAULT_PASSWORD: 'password',
-}, {
-  port: 8081
 })
