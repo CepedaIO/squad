@@ -1,37 +1,10 @@
-import { DockerComposeConfig } from "@vlegm/cli";
+import { ComposeProvider } from "@vlegm/cli";
 
-export const config: DockerComposeConfig = {
-  version: "3.7",
-  predefined: ['postgres', 'penis'],
+export const config: ComposeProvider = {
+  predefined: ['postgres', 'pgadmin'],
   services: {
-    postgres: {
-      ports: [
-        '5432:5432'
-      ],
-      volumes: [
-        'postgres:/var/lib/postgresql/data'
-      ],
-      image: 'postgres:11.6'
-    },
-    pgadmin: {
-      ports: [
-        '8085:80'
-      ],
-      volumes: [
-        'pgadmin:/var/lib/pgadmin'
-      ],
-      image: 'dpage/pgadmin4'
-    },
-    client: {
-      github: 'vlegm/event-matcher-client'
-    },
-    server: {
-      github: 'vlegm/event-matcher-cloud-functions'
-    }
-  },
-  volumes: {
-    postgres: {},
-    pgadmin: {}
+    client: 'git@github.com:vlegm/event-matcher-client',
+    server: 'git@github.com:vlegm/event-matcher-cloud-functions'
   }
 };
 
