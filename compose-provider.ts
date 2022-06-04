@@ -3,10 +3,13 @@ import {NodeJS, RepoSource, PGAdmin, Postgres} from "@vlegm/cli";
 export const server = NodeJS(8080)
   .include('src')
   .source('git@github.com:vlegm/event-matcher-cloud-functions.git')
-  .npmLink('expressman');
+  .npmLink('expressman')
+  .command('yarn dev')
 
 export const client = NodeJS(3000)
-  .source('git@github.com:vlegm/event-matcher-client.git');
+  .include('src')
+  .source('git@github.com:vlegm/event-matcher-client.git')
+  .command('yarn dev')
 
 export const expressman = RepoSource("git@github.com:vlegm/expressman.git", [
   'yarn install',
