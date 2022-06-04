@@ -2,9 +2,9 @@ import { DockerComposeConfig } from "@vlegm/cli";
 
 export const config: DockerComposeConfig = {
   version: "3.7",
+  predefined: ['postgres', 'penis'],
   services: {
     postgres: {
-      env_file: '.env',
       ports: [
         '5432:5432'
       ],
@@ -14,7 +14,6 @@ export const config: DockerComposeConfig = {
       image: 'postgres:11.6'
     },
     pgadmin: {
-      env_file: '.env',
       ports: [
         '8085:80'
       ],
@@ -22,6 +21,12 @@ export const config: DockerComposeConfig = {
         'pgadmin:/var/lib/pgadmin'
       ],
       image: 'dpage/pgadmin4'
+    },
+    client: {
+      github: 'vlegm/event-matcher-client'
+    },
+    server: {
+      github: 'vlegm/event-matcher-cloud-functions'
     }
   },
   volumes: {
