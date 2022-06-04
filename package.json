@@ -1,22 +1,10 @@
 {
-  "name": "game-matcher",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vlegm/game-matcher.git"
+    "build": "tsc"
   },
   "dependencies": {
-    "@vlegm/cli": "1.0.0"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/vlegm/game-matcher/issues"
-  },
-  "homepage": "https://github.com/vlegm/game-matcher#readme"
+    "tsc": "^2.0.3",
+    "typescript": "^4.5.3",
+    "@vlegm/cli": "^1.0.10"
+  }
 }
