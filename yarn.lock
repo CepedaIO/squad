@@ -50,7 +50,7 @@
   resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.4.4.tgz#5d9b63132df54d8909fce1c3f8ca260fdd693e17"
   integrity sha512-ReVR2rLTV1kvtlWFyuot+d1pkpG2Fw/XKE3PDAdj57rbM97ttSp9JZ2UsP+2EHTylra9cUf6JA7tGwW1INzUrA==
 
-"@vlegm/cli@^1.0.23":
+"@vlegm/cli@^1.0.0":
   version "1.0.23"
   resolved "https://registry.yarnpkg.com/@vlegm/cli/-/cli-1.0.23.tgz#5868aee79588d4031a07342bec08d5cb2dfd1ecb"
   integrity sha512-aa/LYT4JRg22sgFEgLA39xwqkV0fXzNh9TKc9BWQlR8OUISlZ3i7IwMTSi38uIj0QD9B5F0C+3o0JfICT2GZBg==
