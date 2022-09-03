@@ -1,17 +1,18 @@
-import {NodeJS, RepoSource, PGAdmin, Postgres} from "@cepedaio/cli";
+import {NodeJS, RepoSource, Postgres} from "@cepedaio/cli";
 
-export const server = NodeJS(8080)
+export const server = NodeJS([8080, 9229])
   .include('src')
-  .source('git@github.com:cepedaio/event-matcher-api.git')
-  .npmLink('expressman')
-  .command('yarn dev')
+  .source('git@github.com:CepedaIO/event-matcher-api.git')
+  .npmLink('shared')
+  .command('yarn dev:watch')
 
 export const client = NodeJS(3000)
   .include('src')
-  .source('git@github.com:cepedaio/event-matcher-client.git')
+  .source('git@github.com:CepedaIO/event-matcher-client.git')
+  .npmLink('shared')
   .command('yarn dev')
 
-export const expressman = RepoSource("git@github.com:cepedaio/expressman.git", [
+export const shared = RepoSource("git@github.com:CepedaIO/event-matcher-shared.git", [
   'yarn install',
   'yarn build'
 ]);
@@ -22,10 +23,4 @@ export const postgres = Postgres({
   POSTGRES_DB: 'event-matcher',
   POSTGRES_USER: 'superuser',
   POSTGRES_PASSWORD: 'password',
-})
-
-export const pgadmin = PGAdmin({
-  PGADMIN_PORT: 8081,
-  PGADMIN_DEFAULT_EMAIL: 'superuser@local.com',
-  PGADMIN_DEFAULT_PASSWORD: 'password',
-})
+});
