@@ -1,6 +1,6 @@
 import {NodeJS, RepoSource, Postgres} from "@cepedaio/cli";
 
-export const server = NodeJS([8080, 9229])
+export const server = NodeJS([8100, 9229])
   .include('src')
   .source('git@github.com:CepedaIO/event-matcher-api.git')
   .npmLink('shared')
