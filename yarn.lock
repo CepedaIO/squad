@@ -12,6 +12,34 @@
     call-me-maybe "^1.0.1"
     js-yaml "^4.1.0"
 
+"@cepedaio/cli@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@cepedaio/cli/-/cli-1.1.0.tgz#7e95f09f91a9d0253687c0416e6cec6ec82b940b"
+  integrity sha512-30P6o1+hsmgSFh1lIpmw7zUiyGY4FZayr/9xywZLN1M1Tuv+LPDe9yxcFnxOp4eO+UAeAxBYKSTVjOvmJ9XN9Q==
+  dependencies:
+    "@cepedaio/utils" "^1.0.0"
+    ajv "^8.10.0"
+    ajv-formats "^2.1.1"
+    chalk "^4.1.2"
+    commander "^8.1.0"
+    cross-env "^7.0.3"
+    ejs "^3.1.6"
+    global "^4.4.0"
+    inquirer "^8.1.2"
+    json-schema-to-typescript "^10.1.5"
+    lodash.filter "^4.6.0"
+    lodash.merge "^4.6.2"
+    mv "^2.1.1"
+    node-json-db "^1.3.0"
+    unzipper "^0.10.11"
+
+"@cepedaio/utils@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@cepedaio/utils/-/utils-1.0.0.tgz#aa97ba39d521ccee8e5f289fc1da878dbda4c863"
+  integrity sha512-3dqN1Jg7UU9BFIBcgmDEYp2aoWPyUoaZrDXTTmA7MqkbmRJMnU7G+X+yKMs3LlCwqeILAjYr4BdftpgivbwYSw==
+  dependencies:
+    yaml "^1.10.2"
+
 "@jsdevtools/ono@^7.1.3":
   version "7.1.3"
   resolved "https://registry.yarnpkg.com/@jsdevtools/ono/-/ono-7.1.3.tgz#9df03bbd7c696a5c58885c34aa06da41c8543796"
@@ -49,33 +77,6 @@
   version "2.4.4"
   resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.4.4.tgz#5d9b63132df54d8909fce1c3f8ca260fdd693e17"
   integrity sha512-ReVR2rLTV1kvtlWFyuot+d1pkpG2Fw/XKE3PDAdj57rbM97ttSp9JZ2UsP+2EHTylra9cUf6JA7tGwW1INzUrA==
-
-"@vlegm/cli@^1.0.0":
-  version "1.0.23"
-  resolved "https://registry.yarnpkg.com/@vlegm/cli/-/cli-1.0.23.tgz#5868aee79588d4031a07342bec08d5cb2dfd1ecb"
-  integrity sha512-aa/LYT4JRg22sgFEgLA39xwqkV0fXzNh9TKc9BWQlR8OUISlZ3i7IwMTSi38uIj0QD9B5F0C+3o0JfICT2GZBg==
-  dependencies:
-    "@vlegm/utils" "^1.0.2"
-    ajv "^8.10.0"
-    ajv-formats "^2.1.1"
-    chalk "^4.1.2"
-    commander "^8.1.0"
-    cross-env "^7.0.3"
-    ejs "^3.1.6"
-    global "^4.4.0"
-    inquirer "^8.1.2"
-    json-schema-to-typescript "^10.1.5"
-    lodash.filter "^4.6.0"
-    mv "^2.1.1"
-    node-json-db "^1.3.0"
-    unzipper "^0.10.11"
-
-"@vlegm/utils@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@vlegm/utils/-/utils-1.0.2.tgz#869d30f810d103ce816988668afc7fed359a0293"
-  integrity sha512-a0tJL3obv58hezfVEE+xxJ0Z0kg9nycyqc5Xgd2dmBx2lvNOlHnLKGT9GvDGApw/nUYGhRTOoH1rBCj1YOCPmw==
-  dependencies:
-    yaml "^1.10.2"
 
 ajv-formats@^2.1.1:
   version "2.1.1"
@@ -667,6 +668,11 @@ lodash.filter@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.filter/-/lodash.filter-4.6.0.tgz#668b1d4981603ae1cc5a6fa760143e480b4c4ace"
   integrity sha1-ZosdSYFgOuHMWm+nYBQ+SAtMSs4=
+
+lodash.merge@^4.6.2:
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
+  integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
 
 lodash@^4.17.20, lodash@^4.17.21:
   version "4.17.21"
