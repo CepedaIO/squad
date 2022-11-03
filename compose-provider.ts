@@ -1,18 +1,18 @@
 import {NodeJS, RepoSource, Postgres} from "@cepedaio/cli";
 
-export const server = NodeJS([8100, 9229])
+export const api = NodeJS([8100, 9229])
   .include('src')
-  .source('git@github.com:CepedaIO/event-matcher-api.git')
+  .source('git@github.com:CepedaIO/squad-api.git')
   .npmLink('shared')
   .command('yarn watch')
 
 export const client = NodeJS(3100)
   .include('src')
-  .source('git@github.com:CepedaIO/event-matcher-client.git')
+  .source('git@github.com:CepedaIO/squad-client.git')
   .npmLink('shared')
   .command('yarn dev')
 
-export const shared = RepoSource("git@github.com:CepedaIO/event-matcher-shared.git", [
+export const shared = RepoSource("git@github.com:CepedaIO/squad-shared.git", [
   'yarn install',
   'yarn build'
 ]);
